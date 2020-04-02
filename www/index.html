@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>smartgate</title>
+
+    </head>
+    <body>
+        <div class="app">
+           <iframe id="mainIframe" onload='onloadIframe();' src="http://hudienko.co.ua:1050" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+            <div id="loadingMessage">
+                <div style=" margin-top: 5%; z-index: 9999">Загрузка....</div>
+                <img id="loadimg" src="img/Loading.gif" style="width: 100%; height: 50%; margin-top: 30%;" >
+            </div>
+        </div>
+        <script>
+            function onloadIframe(){
+                    var loadMes = document.getElementById('loadingMessage');
+                    var loadImg = document.getElementById('loadimg');
+                    loadMes.style.display= 'none';
+                    loadImg.style.display= 'none';
+                    console.log('laod the iframe')
+            };
+        </script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+    </body>
+</html>
